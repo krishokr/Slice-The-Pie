@@ -31,8 +31,11 @@ export default function ProgressBar(props) {
       </div>
       
 
-      <div className='final-circle-container'>
-      <div className='outer-circle' style={{borderColor: (props.step === 4 ? '#FFBF00' : '')}}><div className='circle' style={{backgroundColor: (props.step >= 4) ? '#022851' : '#e0e0de'}}></div></div>
+      <div className='column-container' >
+        <div className='row-container'>
+        <div className='outer-circle' style={{borderColor: (props.step === 4 ? '#FFBF00' : '')}}><div className='circle' style={{backgroundColor: (props.step >= 4) ? '#022851' : '#e0e0de'}}></div></div>
+          
+        </div>
         <h3>Step 4</h3>
       </div>
      
