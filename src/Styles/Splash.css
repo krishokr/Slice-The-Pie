@@ -1,0 +1,42 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-container h1 {
+    color: #022851;
+}
+
+.splash-container h3 {
+    margin: 1% 0;
+    text-align: center;
+    font-size: 2vh;
+    color: #022851;
+    width: 80%;
+}
+
+.splash-container h4 {
+    margin: 1% 0;
+    text-align: center;
+    font-size: 2vh;
+    color: #FFBF00;
+    width: 50%;
+}
+
+button {
+    padding: 0.5% 1%;
+    margin: 1%;
+    margin-left: 0;
+    background-color: #fff;
+    border: 1px solid #022851;
+    color: #022851;
+    font-size: 2vh;
+    transition: 1s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFBF00;
+}
