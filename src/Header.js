@@ -3,7 +3,8 @@ import React from 'react'
 export default function Header() {
 
   const headerStyle = {
-    margin: '5%'
+    margin: '5%',
+    color: '#022851'
   }
 
   return (

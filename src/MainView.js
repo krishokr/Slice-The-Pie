@@ -10,7 +10,7 @@ export default function MainView() {
   const [step, setstep] = useState(1);
 
   function changeStep() {
-    (step === 4) ? setstep(1) : setstep(step+1);
+    return (step === 4) ? setstep(1) : setstep(step+1);
   }
 
   return (

@@ -1,0 +1,19 @@
+.revenue-expense-container {
+    margin: 5%;
+}
+
+.next-button {
+    padding: 0.5% 1%;
+    margin: 3%;
+    margin-left: 0;
+    background-color: #fff;
+    border: 1px solid #022851;
+    color: #022851;
+    font-size: 1.5vh;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #FFBF00;
+}
