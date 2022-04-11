@@ -1,5 +1,9 @@
 .revenue-expense-container {
-    margin: 5%;
+    margin: 0 5%;
+}
+
+.entryboxes-title-container {
+    display: flex;
 }
 
 .next-button {
@@ -16,4 +20,10 @@
 
 .next-button:hover {
     background-color: #FFBF00;
+}
+
+@media (min-width: 700px) {
+    .revenue-expense-content {
+        display: flex;
+    }
 }

@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
+import './Styles/EntryBox.css';
+import ReactTooltip from "react-tooltip";
 
 export default function EntryBox(props) {
+    const [hover, sethover] = useState(false)
+    console.log(props.info);
 
-    const style = {
-        backgroundColor: props.Info.Color,
-        borderRadius: '100%',
-        color: '#000'
+    const circleStyle = {
+        backgroundColor: props.info.Color,
+        borderRadius: '100%'
     }
+
+    function handleHover() {
+        return hover ? sethover(false) : sethover(true)
+    }
+
 
   return (
 
-    <div>
-        <div classname='circle' style={style}></div>
-        <h5>{props.Info.Title}</h5>
-        
-
+    <div className='entrybox'>
+        <div className='circle' style={circleStyle}></div> 
+        <h5 data-tip={props.info.Details}>{props.info.Title}</h5>
+        <ReactTooltip />
     </div>
   )
 }
