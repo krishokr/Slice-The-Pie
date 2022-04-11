@@ -1,29 +1,16 @@
 .splash-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.splash-container h1 {
+    width: 100vw;
+    height: 100vh;
     color: #022851;
 }
 
-.splash-container h3 {
-    margin: 1% 0;
-    text-align: center;
-    font-size: 2vh;
-    color: #022851;
-    width: 80%;
-}
-
-.splash-container h4 {
-    margin: 1% 0;
-    text-align: center;
-    font-size: 2vh;
-    color: #FFBF00;
+.splash-content {
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
 }
+
+
 
 button {
     padding: 0.5% 1%;
