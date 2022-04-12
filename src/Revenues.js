@@ -31,8 +31,6 @@ export default function Revenues(props) {
 
 
   function changeUserData(dataObj, target) {
-    console.log(target.value);
-    
     let updatedDataset = removeDataObjFromUserData(dataObj);
     let pTotal = prevTotal(updatedDataset);
     let newTotal = pTotal + dataObj.value;

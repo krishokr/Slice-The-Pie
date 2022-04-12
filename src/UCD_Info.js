@@ -3,39 +3,57 @@
 export const UCD_Expenses_Info = [
     {
         name: "Medical Center",
-        details: "The cost of providing care at the Medical Center is roughly what we get paid to provide it."
+        details: "The cost of providing care at the Medical Center is roughly what we get paid to provide it.",
+        color: "#f6e50e",
+        value: 43
     },
     {
         name: "Teaching and Teaching Support" ,
-        details: "Professors, advisors, deans, the library, the computer labs, etc, including Medical School faculty salaries."
+        details: "Professors, advisors, deans, the library, the computer labs, etc, including Medical School faculty salaries.",
+        color: "#f6e50e",
+        value: 23
     },
     {
         name: "Research",
-        details: "The costs of doing the research, mostly researcher salaries."
+        details: "The costs of doing the research, mostly researcher salaries.",
+        color: "#fff688",
+        value: 11
     },
     {
         name: "Student Services and Financial Aid",
-        details: "Student Health, things covered by fees, Admissions, and also financial aid from the general funds, which is about $100M or 1.5%."
+        details: "Student Health, things covered by fees, Admissions, and also financial aid from the general funds, which is about $100M or 1.5%.",
+        color: "#5f63ec",
+        value: 8
     },
     {
         name: "Operations and Maintenance",
-        details: "Upkeep of the grounds and building, and utilities, which are less than 1%."
+        details: "Upkeep of the grounds and building, and utilities, which are less than 1%.",
+        color: "#71a8ff",
+        value: 2
     },
     {
         name: "Administration",
-        details: "Provost and Chancellor \'s offices, raising money, accounting, personnel, legal, making budgets."
+        details: "Provost and Chancellor \'s offices, raising money, accounting, personnel, legal, making budgets.",
+        color: "#0f7ab4",
+        value: 3
     },
     {
         name: "Services",
-        details: "The costs of providing dorms, dining,parking, etc."
+        details: "The costs of providing dorms, dining,parking, etc.",
+        color: "#d4e4ff",
+        value: 2
     },
     {
         name: "Public Service",
-        details: "Mostly the cooperative extension, which provides agricultural services to farmers, ranchers, winemakers, etc.  Part of our mission as a land grant university."
+        details: "Mostly the cooperative extension, which provides agricultural services to farmers, ranchers, winemakers, etc.  Part of our mission as a land grant university.",
+        color: "#e3a400",
+        value: 2
     },
     {
         name: "Depreciation, Interest, etc.",
-        details: "Depreciation is the loss of value of buildings and equipment as they wear out. Mostly unavoidable financial losses."
+        details: "Depreciation is the loss of value of buildings and equipment as they wear out. Mostly unavoidable financial losses.",
+        color: "#fff",
+        value: 6
     }
 ]
 
