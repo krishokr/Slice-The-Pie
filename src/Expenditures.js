@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Styles/RevenueExpense.css';
 import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 import './EntryBox';
@@ -8,6 +8,10 @@ import EntryBox from './EntryBox';
 
 export default function Expenditures(props) {
   const [userData, setuserData] = useState([]);
+
+  useEffect(() => {
+    props.updateExpenditureData(userData);
+  },[userData])
 
   //New Functions
   function prevTotal(dataset) {

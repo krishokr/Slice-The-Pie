@@ -6,34 +6,6 @@ import EntryBox from './EntryBox';
 
 
 export default function CompareRevenues(props) {
-  const [data, setdata] = useState([])
-
-  const data01 = [
-    {
-      name: "Group A",
-      value: 400
-    },
-    {
-      "name": "Group B",
-      "value": 300
-    },
-    {
-      "name": "Group C",
-      "value": 300
-    },
-    {
-      "name": "Group D",
-      "value": 200
-    },
-    {
-      "name": "Group E",
-      "value": 278
-    },
-    {
-      "name": "Group F",
-      "value": 189
-    }
-  ];
 
   function getColor(name) {
     let revenueObj = UCD_Revenues_Info.find(revenueObj => revenueObj.name === name);
@@ -52,10 +24,21 @@ export default function CompareRevenues(props) {
       <h2>Compare Revenues</h2>
       
       <div className='revenue-expense-content'>
-        <div className='piechart-container'>
+        <div className='ucd-piechart-container'>
+          <h1>UC Davis Revenue</h1>
           <PieChart width={730} height={250}>
             <Pie data={formatRevenueData()} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
               {formatRevenueData().map(data => <Cell key={data.name} fill={getColor(data.name)} />)}
+            </Pie>
+            <Tooltip />
+          </PieChart>
+          
+        </div>
+        <div className='user-piechart-container'>
+          <h1>Your Guess</h1>
+          <PieChart width={730} height={250}>
+            <Pie data={props.revenueData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
+              {props.revenueData.map(data => <Cell key={data.name} fill={getColor(data.name)} />)}
             </Pie>
             <Tooltip />
           </PieChart>

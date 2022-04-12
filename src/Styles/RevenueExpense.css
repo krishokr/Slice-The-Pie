@@ -22,7 +22,14 @@
     background-color: #FFBF00;
 }
 
-@media (min-width: 700px) {
+.ucd-piechart-container, .user-piechart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
     .revenue-expense-content {
         display: flex;
     }
