@@ -2,77 +2,86 @@
 
 export const UCD_Expenses_Info = [
     {
-        Title: "Medical Center",
-        Details: "The cost of providing care at the Medical Center is roughly what we get paid to provide it."
+        name: "Medical Center",
+        details: "The cost of providing care at the Medical Center is roughly what we get paid to provide it."
     },
     {
-        Title: "Teaching and Teaching Support" ,
-        Details: "Professors, advisors, deans, the library, the computer labs, etc, including Medical School faculty salaries."
+        name: "Teaching and Teaching Support" ,
+        details: "Professors, advisors, deans, the library, the computer labs, etc, including Medical School faculty salaries."
     },
     {
-        Title: "Research",
-        Details: "The costs of doing the research, mostly researcher salaries."
+        name: "Research",
+        details: "The costs of doing the research, mostly researcher salaries."
     },
     {
-        Title: "Student Services and Financial Aid",
-        Details: "Student Health, things covered by fees, Admissions, and also financial aid from the general funds, which is about $100M or 1.5%."
+        name: "Student Services and Financial Aid",
+        details: "Student Health, things covered by fees, Admissions, and also financial aid from the general funds, which is about $100M or 1.5%."
     },
     {
-        Title: "Operations and Maintenance",
-        Details: "Upkeep of the grounds and building, and utilities, which are less than 1%."
+        name: "Operations and Maintenance",
+        details: "Upkeep of the grounds and building, and utilities, which are less than 1%."
     },
     {
-        Title: "Administration",
-        Details: "Provost and Chancellor \'s offices, raising money, accounting, personnel, legal, making budgets."
+        name: "Administration",
+        details: "Provost and Chancellor \'s offices, raising money, accounting, personnel, legal, making budgets."
     },
     {
-        Title: "Services",
-        Details: "The costs of providing dorms, dining,parking, etc."
+        name: "Services",
+        details: "The costs of providing dorms, dining,parking, etc."
     },
     {
-        Title: "Public Service",
-        Details: "Mostly the cooperative extension, which provides agricultural services to farmers, ranchers, winemakers, etc.  Part of our mission as a land grant university."
+        name: "Public Service",
+        details: "Mostly the cooperative extension, which provides agricultural services to farmers, ranchers, winemakers, etc.  Part of our mission as a land grant university."
     },
     {
-        Title: "Depreciation, Interest, etc.",
-        Details: "Depreciation is the loss of value of buildings and equipment as they wear out. Mostly unavoidable financial losses."
+        name: "Depreciation, Interest, etc.",
+        details: "Depreciation is the loss of value of buildings and equipment as they wear out. Mostly unavoidable financial losses."
     }
 ]
 
 export const UCD_Revenues_Info = [
     {
-        Title: "Medical Center",
-        Details: "A large, not-for-profit regional medical center, including multiple hospitals, labs and clinics. Income comes from patients, medical insurance companies, and government programs like medicare.",
-        Color: "#f0bf00"
+        name: "Medical Center",
+        details: "A large, not-for-profit regional medical center, including multiple hospitals, labs and clinics. Income comes from patients, medical insurance companies, and government programs like medicare.",
+        color: "#f0bf00",
+        value: 45
     },
     {
-        Title: "Student Fees",
-        Details: "Fees are dedicated to specific services, such as athletic facilities, bus service (UNITRANS), student organizations, the CoHo and Student Community Center, etc.",
-        Color: "#f6e50e"
+        name: "Student Fees",
+        details: "Fees are dedicated to specific services, such as athletic facilities, bus service (UNITRANS), student organizations, the CoHo and Student Community Center, etc.",
+        color: "#f6e50e",
+        value: 4
+
     },{
-        Title: "State of California",
-        Details: "General funds given by the taxpayers of California, appropriated annualy by the state legislature. General funds are not dedicated to specific services.",
-        Color: "#fff688"
+        name: "State of California",
+        details: "General funds given by the taxpayers of California, appropriated annualy by the state legislature. General funds are not dedicated to specific services.",
+        color: "#fff688",
+        value: 8
     },{
-        Title: "Tuition",
-        Details: "Students pay tuition to attend the University. Non-California residents pay about twice as much as residents.  Tuition is also general funds.",
-        Color: "#5f63ec"
+        name: "Tuition",
+        details: "Students pay tuition to attend the University. Non-California residents pay about twice as much as residents.  Tuition is also general funds.",
+        color: "#5f63ec",
+        value: 11
     },{
-        Title: "Research Grants",
-        Details: "Government and industry funds given to faculty and graduate students to perform research projects. These include up to 50% overhead in addition to the cost of the research.",
-        Color: "#71a8ff"
+        name: "Research Grants",
+        details: "Government and industry funds given to faculty and graduate students to perform research projects. These include up to 50% overhead in addition to the cost of the research.",
+        color: "#71a8ff",
+        value: 13
     },{
-        Title: "Pell Grants",
-        Details: "Federal grants for tuition and living expenses for low-income students. Percentage of students with Pell grants is a good way to measure who a University serves; at UCD, it\'s 34%; at Cal Tech it\'s 14%; At Sac State it\'s 71%.",
-        Color: "#0f7ab4"
+        name: "Pell Grants",
+        details: "Federal grants for tuition and living expenses for low-income students. Percentage of students with Pell grants is a good way to measure who a University serves; at UCD, it\'s 34%; at Cal Tech it\'s 14%; At Sac State it\'s 71%.",
+        color: "#0f7ab4",
+        value: 1
     },{
-        Title: "Non-Educational",
-        Details: "Services other than education that people pay for, like dorms, dining, parking, etc.  At UC Davis, this also includes almost $500M of revenue generated by medical school faculty, or 8%, making this category look really big.",
-        Color: "#d4e4ff"
+        name: "Non-Educational",
+        details: "Services other than education that people pay for, like dorms, dining, parking, etc.  At UC Davis, this also includes almost $500M of revenue generated by medical school faculty, or 8%, making this category look really big.",
+        color: "#d4e4ff",
+        value: 11
     },{
-        Title: "Gifts and Endowments",
-        Details: "Endowments are past gifts that were invested to provide income; interest is earned on other savings. The Museum is the direct result of a $10M gift from Jan Shrem and Maria Manetti Shrem.",
-        Color: "#e3a400"
+        name: "Gifts and Endowments",
+        details: "Endowments are past gifts that were invested to provide income; interest is earned on other savings. The Museum is the direct result of a $10M gift from Jan Shrem and Maria Manetti Shrem.",
+        color: "#e3a400",
+        value: 7
     }
 ]
 
