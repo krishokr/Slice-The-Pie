@@ -7,35 +7,28 @@ import EntryBox from './EntryBox';
 
 
 export default function Revenues(props) {
-  const [userData, setuserData] = useState([])
-  console.log(userData);
-  // const userData = [
-  //   {
-  //     "name": "Group A",
-  //     "value": 400
-  //   },
-  //   {
-  //     "name": "Group B",
-  //     "value": 300
-  //   },
-  //   {
-  //     "name": "Group C",
-  //     "value": 300
-  //   },
-  //   {
-  //     "name": "Group D",
-  //     "value": 200
-  //   },
-  //   {
-  //     "name": "Group E",
-  //     "value": 278
-  //   },
-  //   {
-  //     "name": "Group F",
-  //     "value": 189
-  //   }
-  // ];
+  const [userData, setuserData] = useState([]);
 
+  //New Functions
+  function prevTotal(dataset) {
+    let total = 0;
+    (dataset.length > 0) ? dataset.forEach(obj => total+=obj.value) : total = 0;
+    return total
+  }
+
+  function indexOfData(name) {
+    return userData.findIndex(obj => obj.name === name);
+  }
+
+  function _alreadyExists(name) {
+    return userData.find(obj => obj.name === name);
+  }
+
+  function removeDataObjFromUserData(dataObj) {
+    return (_alreadyExists(dataObj.name)) ? userData.filter(obj => obj.name !== dataObj.name) : userData;
+  }
+
+  //Old Functions
   function getTotal(name) {
     let total = 0;
     userData.forEach(data => {
@@ -52,13 +45,13 @@ export default function Revenues(props) {
     return userData.findIndex(obj => obj.name === name)
   }
 
-  function replaceDuplicateValue(data, index) {
+  function replaceDuplicateValue(dataObj, index) {
     let newUserData = [...userData];
-    newUserData[index] = {name: data.name, value: data.value}
+    newUserData[index] = dataObj
     return newUserData
   }
 
-  function _isDuplicate(data) {
+  function _alreadyExists(data) {
     return (indexOfDuplicateValue(data) !== -1)
   }
 
@@ -71,7 +64,7 @@ export default function Revenues(props) {
     return obj
   }
 
-  function _isDuplicateAndGreaterThan100(data) {
+  function _alreadyExistsAndGreaterThan100(data) {
     let updatedValue = adjustValue(getTotal(data.name));
     let objForDuplicateFunction = {name: data.name, value: updatedValue};
     let updatedUserData = replaceDuplicateValue(objForDuplicateFunction, indexOfDuplicateValue(data.name));
@@ -80,23 +73,23 @@ export default function Revenues(props) {
 
   function changeUserData(data) {
     
-    if (_isDuplicate(data) && _isGreaterThan100(data)) {
+    if (_alreadyExists(data) && _isGreaterThan100(data)) {
       console.log('Is greater than 100 and duplicate.');
-        let updatedUserData = _isDuplicateAndGreaterThan100(data);
-        console.log('Updated user data: '+updatedUserData)
+        let updatedUserData = _alreadyExistsAndGreaterThan100(data);
         return setuserData(updatedUserData);
     }
 
     if (_isGreaterThan100(data)) {
       console.log('Is greater than 100.')
       let updatedValue = adjustValue(getTotal(data.name));
-      let updatedObj = {name: data.name, value: updatedValue}
-      return setuserData([...userData, updatedObj]);
+      let updatedObj = {name: data.name, value: updatedValue};
+      let updatedUserData = _alreadyExists() ? replaceDuplicateValue(updatedObj, indexOfDuplicateValue(data.name)) : [...userData, updatedObj]
+      return setuserData(updatedUserData);
     }
 
-    if (_isDuplicate(data.name)) {
+    if (_alreadyExists(data.name)) {
       console.log('Is duplicate.')
-      console.log('gggg' + data.value);
+      
         let updatedUserData = replaceDuplicateValue(data, indexOfDuplicateValue(data.name));
         return setuserData(updatedUserData);
     }
