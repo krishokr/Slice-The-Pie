@@ -10,15 +10,14 @@ export default function EntryBox(props) {
         borderRadius: '100%'
     }
 
-    
-
     function handleHover() {
         return hover ? sethover(false) : sethover(true)
     }
 
     function handleChange(e) {
-        let obj = {name: props.info.name, value: parseInt(e.target.value)};
-        return props.changeUserData(obj)
+        let value = parseInt((e.target.value === '') ? 0 : e.target.value);
+        let obj = {name: props.info.name, value};
+        return props.changeUserData(obj, e.target)
     }
 
   return (

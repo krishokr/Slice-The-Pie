@@ -16,10 +16,6 @@ export default function Revenues(props) {
     return total
   }
 
-  function indexOfData(name) {
-    return userData.findIndex(obj => obj.name === name);
-  }
-
   function _alreadyExists(name) {
     return userData.find(obj => obj.name === name);
   }
@@ -28,81 +24,27 @@ export default function Revenues(props) {
     return (_alreadyExists(dataObj.name)) ? userData.filter(obj => obj.name !== dataObj.name) : userData;
   }
 
-  //Old Functions
-  function getTotal(name) {
-    let total = 0;
-    userData.forEach(data => {
-      data.name !== name ? total += data.value : total += 0
-    })
-    return total
+  function adjustDataObj(dataObj, prevTotal) {
+    let updatedValue = (prevTotal < 100) ? 100 - prevTotal : 0;
+    return {name: dataObj.name, value: updatedValue}
   }
 
-  function adjustValue(prevTotal) {
-      return 100 - prevTotal
-  }
 
-  function indexOfDuplicateValue(name) {
-    return userData.findIndex(obj => obj.name === name)
-  }
-
-  function replaceDuplicateValue(dataObj, index) {
-    let newUserData = [...userData];
-    newUserData[index] = dataObj
-    return newUserData
-  }
-
-  function _alreadyExists(data) {
-    return (indexOfDuplicateValue(data) !== -1)
-  }
-
-  function _isGreaterThan100(data) {
-    return ((data.value + getTotal(data.name) || data.value) > 100)
-  }
-
-  function getPrevObj(name) {
-    let obj = userData.find(obj => obj.name === name);
-    return obj
-  }
-
-  function _alreadyExistsAndGreaterThan100(data) {
-    let updatedValue = adjustValue(getTotal(data.name));
-    let objForDuplicateFunction = {name: data.name, value: updatedValue};
-    let updatedUserData = replaceDuplicateValue(objForDuplicateFunction, indexOfDuplicateValue(data.name));
-    return updatedUserData
-  }
-
-  function changeUserData(data) {
+  function changeUserData(dataObj, target) {
+    console.log(target.value);
     
-    if (_alreadyExists(data) && _isGreaterThan100(data)) {
-      console.log('Is greater than 100 and duplicate.');
-        let updatedUserData = _alreadyExistsAndGreaterThan100(data);
-        return setuserData(updatedUserData);
-    }
+    let updatedDataset = removeDataObjFromUserData(dataObj);
+    let pTotal = prevTotal(updatedDataset);
+    let newTotal = pTotal + dataObj.value;
+    let updatedDataObj = (newTotal < 100) ? dataObj : adjustDataObj(dataObj, pTotal);
 
-    if (_isGreaterThan100(data)) {
-      console.log('Is greater than 100.')
-      let updatedValue = adjustValue(getTotal(data.name));
-      let updatedObj = {name: data.name, value: updatedValue};
-      let updatedUserData = _alreadyExists() ? replaceDuplicateValue(updatedObj, indexOfDuplicateValue(data.name)) : [...userData, updatedObj]
-      return setuserData(updatedUserData);
-    }
-
-    if (_alreadyExists(data.name)) {
-      console.log('Is duplicate.')
-      
-        let updatedUserData = replaceDuplicateValue(data, indexOfDuplicateValue(data.name));
-        return setuserData(updatedUserData);
-    }
-
-    
-
-    return setuserData([...userData, data]);
-
+    target.value = (target.value === "") ? 0 : updatedDataObj.value; 
+    return setuserData([...updatedDataset, updatedDataObj]);
   }
+
 
   function getColor(name) {
     let revenueObj = UCD_Revenues_Info.find(revenueObj => revenueObj.name === name);
-    console.log(revenueObj);
     return revenueObj.color
   }
 
@@ -113,8 +55,7 @@ export default function Revenues(props) {
       <div className='revenue-expense-content'>
         <div className='piechart-container'>
           <PieChart width={730} height={250}>
-            <Pie data={userData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#8884d8">
-              {console.log(userData)}
+            <Pie data={userData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
               {userData.map(data => <Cell key={data.name} fill={getColor(data.name)} />)}
             </Pie>
             <Tooltip />
