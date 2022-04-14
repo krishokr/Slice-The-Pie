@@ -1,25 +1,33 @@
 .splash-container {
     width: 100vw;
-    height: 100vh;
     color: #022851;
 }
 
+.splash-container h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.splash-container h3 {
+    font-size: 2em;
+    color: #FFBF00;
+    font-weight: 400;
+}
+
 .splash-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    padding: 10%;
 }
 
 
 
 button {
-    padding: 0.5% 1%;
+    padding: 1%;
     margin: 1%;
     margin-left: 0;
     background-color: #fff;
     border: 1px solid #022851;
     color: #022851;
-    font-size: 2vh;
+    font-size: 3vh;
     transition: 1s;
     cursor: pointer;
 }

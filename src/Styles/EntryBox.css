@@ -1,11 +1,19 @@
 .entrybox {
     display: flex;
     margin: 2% 0;
+    
 }
 
 .circle {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.entrybox input {
+    border: none;
+    width: 50px;
+    font-size: 20px;
+    margin-right: 10%;
 }
 
 .entrybox h5 {

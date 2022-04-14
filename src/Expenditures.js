@@ -56,7 +56,7 @@ export default function Expenditures(props) {
       <h2>Expenditures</h2>
       <div className='revenue-expense-content'>
         <div className='piechart-container'>
-          <PieChart width={730} height={250}>
+          <PieChart width={300} height={250}>
             <Pie data={userData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
               {userData.map(data => <Cell key={data.name} fill={getColor(data.name)} />)}
             </Pie>

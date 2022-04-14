@@ -26,7 +26,7 @@ export default function CompareExpenditures(props) {
         
         <div className='ucd-piechart-container'>
           <h1>UC Davis Expenditures</h1>
-          <PieChart width={730} height={250}>
+          <PieChart width={300} height={250}>
             <Pie data={formatExpenditureData()} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
               {formatExpenditureData().map(data => <Cell key={data.name} fill={getColor(data.name)} />)}
             </Pie>
@@ -36,7 +36,7 @@ export default function CompareExpenditures(props) {
 
         <div className='user-piechart-container'>
           <h1>Your Guess</h1>
-          <PieChart width={730} height={250}>
+          <PieChart width={300} height={250}>
             <Pie data={props.expenditureData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80}>
               {props.expenditureData.map(data => <Cell key={data.name} fill={getColor(data.name)} />)}
             </Pie>

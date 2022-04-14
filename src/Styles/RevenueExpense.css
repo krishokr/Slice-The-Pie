@@ -2,18 +2,23 @@
     margin: 0 5%;
 }
 
+.entryboxes-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .entryboxes-title-container {
     display: flex;
 }
 
 .next-button {
-    padding: 0.5% 1%;
-    margin: 3%;
+    padding: 1%;
+    margin: 5%;
     margin-left: 0;
     background-color: #fff;
     border: 1px solid #022851;
     color: #022851;
-    font-size: 1.5vh;
+    font-size: 1.5em;
     transition: 1s;
     cursor: pointer;
 }
