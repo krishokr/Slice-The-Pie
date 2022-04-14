@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/slice-the-pie/static/css/main.02dc7128.css",
+    "main.js": "/slice-the-pie/static/js/main.54d5ff8e.js",
+    "static/js/787.514746bc.chunk.js": "/slice-the-pie/static/js/787.514746bc.chunk.js",
+    "index.html": "/slice-the-pie/index.html",
+    "main.02dc7128.css.map": "/slice-the-pie/static/css/main.02dc7128.css.map",
+    "main.54d5ff8e.js.map": "/slice-the-pie/static/js/main.54d5ff8e.js.map",
+    "787.514746bc.chunk.js.map": "/slice-the-pie/static/js/787.514746bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02dc7128.css",
+    "static/js/main.54d5ff8e.js"
+  ]
+}
